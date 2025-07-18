@@ -4,144 +4,140 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centre de Requêtes - Votre Plateforme</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
-        /* Ici sera le CSS */
+        /* CSS sera ici */
     </style>
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="logo">Votre Logo</div>
-        <nav>
-            <ul>
-                <li><a href="#home">Accueil</a></li>
-                <li><a href="#motifs">Motifs</a></li>
-                <li><a href="#rediger">Comment Rédiger</a></li>
-                <li><a href="#faq">FAQ</a></li>
-            </ul>
+    <header id="navbar" class="navbar">
+        <div class="navbar-logo">
+            <a href="#hero">
+                <span class="logo-text">Votre Logo</span>
+            </a>
+        </div>
+        <nav class="navbar-links">
+            <a href="#motifs">Motifs</a>
+            <a href="#redaction">Rédaction</a>
+            <a href="#faq">FAQ</a>
         </nav>
     </header>
 
-    <section id="home" class="hero-section">
+    <section id="hero" class="hero-section">
         <div class="hero-content">
-            <h1>Communiquez avec nous, simplement.</h1>
-            <p>Notre guide pour des requêtes claires et efficaces.</p>
-            <a href="#motifs" class="btn btn-primary">Commencer une Requête</a>
+            <h1 class="fade-in">La simplicité au cœur de vos requêtes.</h1>
+            <p class="fade-in delay-1">Un guide clair pour une communication efficace et rapide.</p>
+            <a href="#motifs" class="btn-scroll fade-in delay-2">
+                Commencer <i class="fas fa-arrow-right"></i>
+            </a>
         </div>
     </section>
 
     <section id="motifs" class="section-motifs">
-        <div class="container">
+        <div class="section-header">
             <h2 class="section-title">Quel est le motif de votre requête ?</h2>
-            <div class="motifs-grid">
-                <div class="motif-card">
-                    <span class="icon">📜</span>
-                    <h3>Contestation administrative</h3>
-                    <p>Contester une décision ou une sanction reçue.</p>
-                </div>
-                <div class="motif-card">
-                    <span class="icon">🤝</span>
-                    <h3>Demande d'ami</h3>
-                    <p>Faire une demande de contact ou d'ami.</p>
-                </div>
-                <div class="motif-card">
-                    <span class="icon">🚨</span>
-                    <h3>Signalement</h3>
-                    <p>Signaler un comportement ou un contenu inapproprié.</p>
-                </div>
-                <div class="motif-card">
-                    <span class="icon">🔗</span>
-                    <h3>Partenariat</h3>
-                    <p>Proposer une collaboration ou un partenariat.</p>
-                </div>
-                <div class="motif-card">
-                    <span class="icon">✨</span>
-                    <h3>Suggestion</h3>
-                    <p>Partager une idée d'amélioration pour la plateforme.</p>
-                </div>
-                <div class="motif-card">
-                    <span class="icon">😠</span>
-                    <h3>Plainte</h3>
-                    <p>Faire part d'une insatisfaction ou d'un problème.</p>
-                </div>
-                <div class="motif-card">
-                    <span class="icon">...</span>
-                    <h3>Autres</h3>
-                    <p>Pour toute autre demande spécifique.</p>
-                </div>
+        </div>
+        <div class="motifs-grid">
+            <div class="motif-card card-hover-1">
+                <div class="icon-bg">📜</div>
+                <h3>Contestation</h3>
+                <p>Pour contester une décision administrative ou une sanction.</p>
+            </div>
+            <div class="motif-card card-hover-2">
+                <div class="icon-bg">🤝</div>
+                <h3>Demande d'ami</h3>
+                <p>Envoyez une demande de contact ou d'ami.</p>
+            </div>
+            <div class="motif-card card-hover-3">
+                <div class="icon-bg">🚨</div>
+                <h3>Signalement</h3>
+                <p>Signalez un contenu ou un comportement inapproprié.</p>
+            </div>
+            <div class="motif-card card-hover-4">
+                <div class="icon-bg">🔗</div>
+                <h3>Partenariat</h3>
+                <p>Proposez une collaboration ou un partenariat.</p>
+            </div>
+            <div class="motif-card card-hover-5">
+                <div class="icon-bg">✨</div>
+                <h3>Suggestion</h3>
+                <p>Partagez vos idées d'amélioration pour notre plateforme.</p>
+            </div>
+            <div class="motif-card card-hover-6">
+                <div class="icon-bg">😠</div>
+                <h3>Plainte</h3>
+                <p>Faites-nous part d'un problème ou d'une insatisfaction.</p>
             </div>
         </div>
     </section>
 
-    <section id="rediger" class="section-redaction">
-        <div class="container">
+    <section id="redaction" class="section-redaction">
+        <div class="section-header">
             <h2 class="section-title">Comment rédiger une requête ?</h2>
-            <div class="regles-list">
-                <div class="regle-item">
-                    <div class="regle-icon">
-                        <span class="circle">1</span>
-                    </div>
-                    <div class="regle-content">
-                        <h4>Clarté et concision</h4>
-                        <p>Allez droit au but en décrivant clairement votre situation. Évitez les détails superflus.</p>
-                    </div>
+        </div>
+        <div class="regles-container">
+            <div class="regle-item">
+                <div class="regle-icon">
+                    <i class="fas fa-edit"></i>
                 </div>
-                <div class="regle-item">
-                    <div class="regle-icon">
-                        <span class="circle">2</span>
-                    </div>
-                    <div class="regle-content">
-                        <h4>Orthographe et relecture</h4>
-                        <p>Une relecture est essentielle. Une requête sans fautes est plus facile à comprendre et à traiter.</p>
-                    </div>
+                <div class="regle-content">
+                    <h4>Clair et Concis</h4>
+                    <p>Allez droit au but, en décrivant votre situation avec précision et sans détails inutiles.</p>
                 </div>
-                <div class="regle-item">
-                    <div class="regle-icon">
-                        <span class="circle">3</span>
-                    </div>
-                    <div class="regle-content">
-                        <h4>Règlement et hashtags</h4>
-                        <p>Utilisez les hashtags appropriés (ex: `#signalement`) et respectez les règles de la plateforme.</p>
-                    </div>
+            </div>
+            <div class="regle-item">
+                <div class="regle-icon">
+                    <i class="fas fa-check-circle"></i>
                 </div>
-                <div class="regle-item">
-                    <div class="regle-icon">
-                        <span class="circle">4</span>
-                    </div>
-                    <div class="regle-content">
-                        <h4>Procédure adaptée</h4>
-                        <p>Chaque type de requête a sa procédure. Suivez-la pour assurer un traitement rapide.</p>
-                    </div>
+                <div class="regle-content">
+                    <h4>Relisez-vous</h4>
+                    <p>Assurez-vous de la bonne orthographe. Un message sans faute est plus professionnel et traité plus rapidement.</p>
                 </div>
-                <div class="regle-item">
-                    <div class="regle-icon">
-                        <span class="circle">5</span>
-                    </div>
-                    <div class="regle-content">
-                        <h4>Minimum 10 caractères</h4>
-                        <p>Pour être prise en compte, votre requête doit dépasser 10 caractères. C'est une garantie de sérieux.</p>
-                    </div>
+            </div>
+            <div class="regle-item">
+                <div class="regle-icon">
+                    <i class="fas fa-hashtag"></i>
+                </div>
+                <div class="regle-content">
+                    <h4>Hashtags et Règlement</h4>
+                    <p>Utilisez les bons hashtags (ex: #signalement) et respectez toujours les règles de la communauté.</p>
+                </div>
+            </div>
+            <div class="regle-item">
+                <div class="regle-icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <div class="regle-content">
+                    <h4>Procédures</h4>
+                    <p>Pour certains motifs, des procédures spécifiques sont requises. Pensez à les respecter pour un traitement efficace.</p>
+                </div>
+            </div>
+            <div class="regle-item">
+                <div class="regle-icon">
+                    <i class="fas fa-list-ol"></i>
+                </div>
+                <div class="regle-content">
+                    <h4>Min. 10 caractères</h4>
+                    <p>Votre requête doit contenir au moins 10 caractères. C'est un minimum pour garantir le sérieux de la demande.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2024 Votre Plateforme. Tous droits réservés.</p>
-                <div class="social-links">
-                    <a href="#">Fb</a>
-                    <a href="#">Tw</a>
-                    <a href="#">Ig</a>
-                </div>
-            </div>
+        <p>&copy; 2024 Votre Plateforme. Tous droits réservés.</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
         </div>
     </footer>
 
     <script>
-        // JavaScript pour les interactions
+        // JavaScript sera ici
     </script>
+
 </body>
 </html>
