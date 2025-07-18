@@ -3,141 +3,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centre de Requêtes - Votre Plateforme</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>Comment utiliser les requêtes - Notre Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* CSS sera ici */
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --background-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #343a40;
+            --border-radius: 10px;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            margin: 40px auto;
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            padding: 40px;
+        }
+
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--primary-color);
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+        }
+
+        .section-title .icon {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background-color: #f1f7ff;
+            border-radius: var(--border-radius);
+            padding: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #d0e7ff;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .card h4 {
+            margin-top: 0;
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card h4 .fa-icon {
+            color: var(--primary-color);
+        }
+
+        .list-group {
+            padding: 0;
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .list-item .icon {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+
+        .list-item-content {
+            flex-grow: 1;
+        }
+        
+        .list-item-content strong {
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
+                padding: 20px;
+            }
+            header h1 {
+                font-size: 2rem;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <header id="navbar" class="navbar">
-        <div class="navbar-logo">
-            <a href="#hero">
-                <span class="logo-text">Votre Logo</span>
-            </a>
-        </div>
-        <nav class="navbar-links">
-            <a href="#motifs">Motifs</a>
-            <a href="#redaction">Rédaction</a>
-            <a href="#faq">FAQ</a>
-        </nav>
-    </header>
+    <div class="container">
+        <header>
+            <h1>Comment utiliser les requêtes</h1>
+            <p>
+                Bienvenue sur la page d'aide concernant l'utilisation de notre système de requêtes. Ce guide est conçu pour vous aider à soumettre vos demandes de manière claire et efficace.
+            </p>
+        </header>
 
-    <section id="hero" class="hero-section">
-        <div class="hero-content">
-            <h1 class="fade-in">La simplicité au cœur de vos requêtes.</h1>
-            <p class="fade-in delay-1">Un guide clair pour une communication efficace et rapide.</p>
-            <a href="#motifs" class="btn-scroll fade-in delay-2">
-                Commencer <i class="fas fa-arrow-right"></i>
-            </a>
-        </div>
-    </section>
+        <section class="motifs">
+            <h2 class="section-title"><i class="fas fa-question-circle icon"></i> Pourquoi utiliser une requête ?</h2>
+            <p>
+                Notre système de requêtes est le meilleur moyen d'entrer en contact avec l'équipe dédiée pour chaque problème. En choisissant la bonne catégorie, vous garantissez que votre message arrive directement à la personne compétente, ce qui permet un traitement plus rapide et plus efficace.
+            </p>
+            <div class="card-grid">
+                <div class="card">
+                    <h4><i class="fas fa-file-signature fa-icon"></i> Contestation administrative</h4>
+                    <p>Vous souhaitez faire appel d'une décision prise par notre équipe administrative ? Cette catégorie est la bonne. Que ce soit pour une sanction, un refus de validation ou toute autre décision, votre requête sera examinée par le service approprié.</p>
+                </div>
+                <div class="card">
+                    <h4><i class="fas fa-user-plus fa-icon"></i> Demande d'ami</h4>
+                    <p>Si vous rencontrez des difficultés techniques pour ajouter un ami, ou si vous avez une question spécifique liée à notre fonctionnalité sociale, utilisez cette option pour obtenir de l'aide rapidement.</p>
+                </div>
+                <div class="card">
+                    <h4><i class="fas fa-exclamation-triangle fa-icon"></i> Signalement</h4>
+                    <p>Un utilisateur enfreint notre règlement ? Un contenu est inapproprié ? Pour assurer la sécurité de notre communauté, il est crucial de nous signaler ce type de comportement. Plus votre signalement est précis (avec des captures d'écran, par exemple), plus vite nous pourrons agir.</p>
+                </div>
+                <div class="card">
+                    <h4><i class="fas fa-handshake fa-icon"></i> Partenariat</h4>
+                    <p>Vous êtes une marque, un créateur de contenu ou une association et vous souhaitez collaborer avec nous ? Soumettez votre proposition ici. Notre équipe en charge des partenariats examinera votre requête et vous répondra dans les plus brefs délais.</p>
+                </div>
+                <div class="card">
+                    <h4><i class="fas fa-lightbulb fa-icon"></i> Suggestion</h4>
+                    <p>Vous avez une idée pour améliorer notre service ou vous souhaitez suggérer une nouvelle fonctionnalité ? Nous apprécions énormément vos retours. Partagez-les via cette catégorie, et votre idée sera transmise à l'équipe de développement.</p>
+                </div>
+                <div class="card">
+                    <h4><i class="fas fa-bug fa-icon"></i> Plainte</h4>
+                    <p>Un bug technique, un problème de facturation ou une insatisfaction concernant un service ? Formulez une plainte officielle. Cette démarche nous permet de documenter le problème et de trouver une solution adaptée dans les meilleurs délais.</p>
+                </div>
+                <div class="card">
+                    <h4><i class="fas fa-ellipsis-h fa-icon"></i> Autres</h4>
+                    <p>Si votre requête ne correspond à aucune des catégories ci-dessus, sélectionnez "Autres". Indiquez clairement votre motif dans le titre et le corps du message pour que nous puissions la rediriger vers le bon service.</p>
+                </div>
+            </div>
+        </section>
 
-    <section id="motifs" class="section-motifs">
-        <div class="section-header">
-            <h2 class="section-title">Quel est le motif de votre requête ?</h2>
-        </div>
-        <div class="motifs-grid">
-            <div class="motif-card card-hover-1">
-                <div class="icon-bg">📜</div>
-                <h3>Contestation</h3>
-                <p>Pour contester une décision administrative ou une sanction.</p>
-            </div>
-            <div class="motif-card card-hover-2">
-                <div class="icon-bg">🤝</div>
-                <h3>Demande d'ami</h3>
-                <p>Envoyez une demande de contact ou d'ami.</p>
-            </div>
-            <div class="motif-card card-hover-3">
-                <div class="icon-bg">🚨</div>
-                <h3>Signalement</h3>
-                <p>Signalez un contenu ou un comportement inapproprié.</p>
-            </div>
-            <div class="motif-card card-hover-4">
-                <div class="icon-bg">🔗</div>
-                <h3>Partenariat</h3>
-                <p>Proposez une collaboration ou un partenariat.</p>
-            </div>
-            <div class="motif-card card-hover-5">
-                <div class="icon-bg">✨</div>
-                <h3>Suggestion</h3>
-                <p>Partagez vos idées d'amélioration pour notre plateforme.</p>
-            </div>
-            <div class="motif-card card-hover-6">
-                <div class="icon-bg">😠</div>
-                <h3>Plainte</h3>
-                <p>Faites-nous part d'un problème ou d'une insatisfaction.</p>
-            </div>
-        </div>
-    </section>
+        <hr style="border: 0; border-top: 1px solid #dee2e6; margin: 40px 0;">
 
-    <section id="redaction" class="section-redaction">
-        <div class="section-header">
-            <h2 class="section-title">Comment rédiger une requête ?</h2>
-        </div>
-        <div class="regles-container">
-            <div class="regle-item">
-                <div class="regle-icon">
-                    <i class="fas fa-edit"></i>
-                </div>
-                <div class="regle-content">
-                    <h4>Clair et Concis</h4>
-                    <p>Allez droit au but, en décrivant votre situation avec précision et sans détails inutiles.</p>
-                </div>
-            </div>
-            <div class="regle-item">
-                <div class="regle-icon">
-                    <i class="fas fa-check-circle"></i>
-                </div>
-                <div class="regle-content">
-                    <h4>Relisez-vous</h4>
-                    <p>Assurez-vous de la bonne orthographe. Un message sans faute est plus professionnel et traité plus rapidement.</p>
-                </div>
-            </div>
-            <div class="regle-item">
-                <div class="regle-icon">
-                    <i class="fas fa-hashtag"></i>
-                </div>
-                <div class="regle-content">
-                    <h4>Hashtags et Règlement</h4>
-                    <p>Utilisez les bons hashtags (ex: #signalement) et respectez toujours les règles de la communauté.</p>
-                </div>
-            </div>
-            <div class="regle-item">
-                <div class="regle-icon">
-                    <i class="fas fa-cogs"></i>
-                </div>
-                <div class="regle-content">
-                    <h4>Procédures</h4>
-                    <p>Pour certains motifs, des procédures spécifiques sont requises. Pensez à les respecter pour un traitement efficace.</p>
-                </div>
-            </div>
-            <div class="regle-item">
-                <div class="regle-icon">
-                    <i class="fas fa-list-ol"></i>
-                </div>
-                <div class="regle-content">
-                    <h4>Min. 10 caractères</h4>
-                    <p>Votre requête doit contenir au moins 10 caractères. C'est un minimum pour garantir le sérieux de la demande.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        <section class="redaction">
+            <h2 class="section-title"><i class="fas fa-pencil-alt icon"></i> Comment rédiger une requête ?</h2>
+            <p>
+                Une requête bien rédigée nous aide à vous fournir une réponse rapide et précise. Suivez ces étapes pour formuler votre message efficacement.
+            </p>
+            <ul class="list-group">
+                <li class="list-item">
+                    <i class="fas fa-spell-check icon"></i>
+                    <div class="list-item-content">
+                        <strong>Attention aux fautes d'orthographe</strong>
+                        <p>Prenez le temps de vous relire. Un message clair et sans faute est plus facile à traiter, ce qui nous permet de vous aider plus rapidement.</p>
+                    </div>
+                </li>
+                <li class="list-item">
+                    <i class="fas fa-hashtag icon"></i>
+                    <div class="list-item-content">
+                        <strong>Respectez le règlement et les hashtags</strong>
+                        <p>Assurez-vous que votre requête respecte nos conditions d'utilisation. Si la procédure exige l'utilisation de hashtags (comme #PLAINTE ou #CONTESTATION), n'oubliez pas de les inclure au début de votre message.</p>
+                    </div>
+                </li>
+                <li class="list-item">
+                    <i class="fas fa-bullseye icon"></i>
+                    <div class="list-item-content">
+                        <strong>Soyez clair et concis</strong>
+                        <p>Allez droit au but. Expliquez votre problème ou votre demande de manière simple et directe. Évitez les détails superflus pour que nous puissions comprendre la situation d'un coup d'œil.</p>
+                    </div>
+                </li>
+                <li class="list-item">
+                    <i class="fas fa-clipboard-list icon"></i>
+                    <div class="list-item-content">
+                        <strong>Respectez les procédures</strong>
+                        <p>Pour certains types de requêtes (par exemple, les contestations ou les partenariats), des procédures spécifiques sont en place. Assurez-vous de les suivre pour que votre demande soit valide et traitée sans délai.</p>
+                    </div>
+                </li>
+                <li class="list-item">
+                    <i class="fas fa-text-width icon"></i>
+                    <div class="list-item-content">
+                        <strong>Plus de 10 caractères</strong>
+                        <p>Votre message doit dépasser 10 caractères pour être pris en compte. Cette exigence simple nous permet de filtrer les requêtes vides et d'assurer un meilleur suivi des demandes légitimes.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
 
-    <footer class="footer">
-        <p>&copy; 2024 Votre Plateforme. Tous droits réservés.</p>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
-    </footer>
-
-    <script>
-        // JavaScript sera ici
-    </script>
+    </div>
 
 </body>
 </html>
